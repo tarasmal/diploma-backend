@@ -1,0 +1,18 @@
+import {HeroController} from "./presentation/heroes/hero.controller";
+import {Module} from "@nestjs/common";
+import {MongooseModule} from "@nestjs/mongoose";
+import {HeroEntity, HeroSchema} from "./infrastructure/persistence/mongoose/hero/hero.schema";
+import {HeroRepository} from "./infrastructure/persistence/mongoose/hero/hero.repository";
+import {HeroService} from "./application/heroes/hero.service";
+
+@Module({
+    imports: [
+        MongooseModule.forFeature([{ name: HeroEntity.name, schema: HeroSchema }]),
+    ],
+    providers: [
+        { provide: 'IHeroRepository', useClass: HeroRepository },
+        HeroService,
+    ],
+    controllers: [HeroController],
+})
+export class HeroModule {}

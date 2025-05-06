@@ -1,6 +1,6 @@
 import {Controller, Get, Param} from "@nestjs/common";
-import {HeroService} from "../../application/heroes/hero.service";
-import {Hero} from "../../domain/ heroes/hero.interface";
+import {HeroService} from "../application/hero.service";
+import {Hero} from "../domain/ heroes/hero.interface";
 
 @Controller('heroes')
 export class HeroController {

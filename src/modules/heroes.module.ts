@@ -1,9 +1,9 @@
-import {HeroController} from "../presentation/heroes/hero.controller";
+import {HeroController} from "../presentation/hero.controller";
 import {Module} from "@nestjs/common";
 import {MongooseModule} from "@nestjs/mongoose";
 import {HeroEntity, HeroSchema} from "../infrastructure/persistence/mongoose/hero/hero.schema";
 import {HeroRepository} from "../infrastructure/persistence/mongoose/hero/hero.repository";
-import {HeroService} from "../application/heroes/hero.service";
+import {HeroService} from "../application/hero.service";
 import {LoggingModule} from "./logging.module";
 
 @Module({

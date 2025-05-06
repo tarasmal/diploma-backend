@@ -1,6 +1,6 @@
 import {Inject, Injectable} from '@nestjs/common';
-import {IHeroRepository} from "../../domain/ heroes/heroRepository.interface";
-import {Hero} from "../../domain/ heroes/hero.interface";
+import {IHeroRepository} from "../domain/ heroes/heroRepository.interface";
+import {Hero} from "../domain/ heroes/hero.interface";
 
 @Injectable()
 export class HeroService {
